@@ -152,36 +152,6 @@
             margin-bottom: 1rem;
         }
 
-        .privacy-section {
-            background: #f9f9f9;
-            padding: 4rem 2rem;
-        }
-
-        .privacy-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .privacy-content h2 {
-            color: #1565c0;
-            margin-bottom: 2rem;
-        }
-
-        .privacy-content h3 {
-            color: #333;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .privacy-content ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .privacy-content li {
-            margin-bottom: 0.5rem;
-        }
-
         footer {
             background: #333;
             color: white;
@@ -260,6 +230,26 @@
             color: #666;
             line-height: 1.6;
         }
+        .privacy-link-section {
+            background: #e3f2fd;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .privacy-link-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-link-content h2 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-link-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
 
         @media (max-width: 768px) {
             .hero h1 {
@@ -296,7 +286,7 @@
             <nav>
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#privacy">Privacy Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
                 <a href="https://www.youtube.com/watch?v=UReSmwT4O9E" target="_blank">Tutorial</a>
             </nav>
         </div>
@@ -404,114 +394,11 @@
         </section>
     </div>
 
-    <section id="privacy" class="privacy-section">
-        <div class="privacy-content">
-            <h2>Privacy Policy</h2>
-            <h3>1. Introduction</h3>
-            <p>SpreadsheetMemo ("I", "my" or "the app") is a flashcard-based learning web application developed by AntLightCode. This privacy policy explains how the app handles your information when you use the service.</p>
-
-            <h3>2. Information Collected by the App</h3>
-            <p><strong>SpreadsheetMemo app does not collect, store, or share any personal information.</strong></p>
-            <p>SpreadsheetMemo operates entirely through Google's infrastructure and requires the following permissions to function:</p>
-            <ul>
-                <li><strong>View and manage your spreadsheets in Google Drive:</strong> Required to access and modify your SpreadsheetMemo documents for learning purposes.</li>
-                <li><strong>View and manage files in your Google Drive:</strong> Required to locate and open SpreadsheetMemo documents. The app only accesses SpreadsheetMemo documents and has no access to any other files.</li>
-            </ul>
-
-            <h3>3. How SpreadsheetMemo Uses Your Information</h3>
-            <p>The app accesses your Google Sheets documents solely to:</p>
-            <ul>
-                <li>Display flashcard content for learning sessions</li>
-                <li>Track your progress within the spreadsheet (marking items as known, unknown, etc.)</li>
-                <li>Allow you to add new flashcard entries</li>
-            </ul>
-            <p><strong>All data remains in your Google Drive and is never transmitted to or stored on any servers.</strong></p>
-
-            <h3>4. Data Storage and Security</h3>
-            <ul>
-                <li>All your flashcard data is stored in your own Google Drive account</li>
-                <li>SpreadsheetMemo does not maintain any databases or servers that store user data</li>
-                <li>Your documents belong only to you</li>
-                <li>All connections are made via secure HTTPS protocol</li>
-            </ul>
-
-            <h3>5. Google Authorization</h3>
-            <p>SpreadsheetMemo uses Google's OAuth 2.0 for authentication. This means:</p>
-            <ul>
-                <li>Your email, login, password, and personal information are NOT passed to SpreadsheetMemo</li>
-                <li>They remain your property and are managed by Google</li>
-                <li>From the app perspective, you remain anonymous</li>
-                <li>SpreadsheetMemo only receive authorization to access specific Google Drive files on your behalf</li>
-            </ul>
-
-            <h3>6. Third-Party Services</h3>
-            <p>SpreadsheetMemo is built on Google Apps Script platform and uses:</p>
-            <ul>
-                <li>Google Sheets API (for spreadsheet access)</li>
-                <li>Google Drive API (for file management)</li>
-            </ul>
-            <p>These services operate under their own privacy policies. Google's privacy policy can be found at: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-
-            <h3>7. User Rights</h3>
-            <p>You have complete control over your data:</p>
-            <ul>
-                <li><strong>Access:</strong> All your data is in your Google Drive and accessible at any time</li>
-                <li><strong>Modification:</strong> You can edit your spreadsheets directly in Google Sheets</li>
-                <li><strong>Deletion:</strong> You can delete any SpreadsheetMemo documents from your Google Drive</li>
-                <li><strong>Revocation:</strong> You can revoke SpreadsheetMemo's access at any time</li>
-            </ul>
-
-            <h3>8. Revoking Access</h3>
-            <p>You can uninstall and revoke SpreadsheetMemo's access in two ways:</p>
-            <ul>
-                <li>Visit <a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a> and remove SpreadsheetMemo</li>
-                <li>Use the uninstall link in the email from Google titled "More information about Spreadsheet Memo with uninstall instructions"</li>
-            </ul>
-            <p>Any documents you've created will remain in your Google Drive after uninstalling.</p>
-
-            <h3>9. Cookies and Tracking</h3>
-            <p>SpreadsheetMemo does not use cookies for tracking purposes. Google may use cookies for authentication and session management as part of their services.</p>
-
-            <h3>10. Children's Privacy</h3>
-            <p>SpreadsheetMemo can be used for educational purposes by users of all ages. Since the App does not collect any personal information, there are no age restrictions. However, users under 13 should use the service with parental supervision as required by Google's terms of service.</p>
-
-            <h3>11. International Data Transfers</h3>
-            <p>Since all data is stored in your Google Drive, data storage location is determined by your Google account settings. SpreadsheetMemo itself does not transfer any data internationally.</p>
-
-            <h3>12. Usage Terms</h3>
-            <p><strong>Personal and Educational Use:</strong> SpreadsheetMemo is free for personal and educational purposes.</p>
-            <p><strong>Commercial Use:</strong> Please contact me (<a href="mailto:AntLightCode@gmail.com">AntLightCode@gmail.com</a>) if you wish to use SpreadsheetMemo in any commercial context (corporate, office, military, government, etc.).</p>
-
-            <h3>13. Disclaimer</h3>
-            <p>SpreadsheetMemo is provided "as is" and developed as a hobby project by a solo developer in spare time. Please do consider this app as a constant <i>beta</i>.</p>
-            <p>While I strive to provide a reliable service:</p>
-            <ul>
-                <li>The developer is not responsible for any service failure or unavailability</li>
-                <li>No warranty is made against electronic virus, worms, or other defects</li>
-                <li>Users assume full responsibility for using the application</li>
-                <li>The developer is not responsible for web hosting interruptions</li>
-                <li>I reserve the right to suspend service without notice</li>
-            </ul>
-
-            <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: 8px; border-left: 4px solid #1565c0;">
-                <p><strong>About the Developer:</strong> SpreadsheetMemo is a passion project created and maintained by a solo developer in spare time. Every feature is created with care to provide the best learning experience possible, though as with any hobby project, please understand that updates and support may vary based on available time.</p>
-            </div>
-
-            <h3>14. Contact Information</h3>
-            <p>For questions about this privacy policy or SpreadsheetMemo:</p>
-            <ul>
-                <li><strong>E-mail:</strong> <a href="mailto:AntLightCode@gmail.com">AntLightCode@gmail.com</a></li>
-                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/SpreadsheetMemo" target="_blank">facebook.com/SpreadsheetMemo</a></li>
-                <li><strong>X (Twitter):</strong> <a href="https://x.com/SpreadsheetMemo" target="_blank">x.com/SpreadsheetMemo</a></li>
-            </ul>
-
-            <h3>15. Google API Services Requirements</h3>
-            <p>SpreadsheetMemo's use and transfer of information received from Google APIs adheres to <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-
-            <div style="margin-top: 3rem; padding: 2rem; background: #e3f2fd; border-radius: 8px;">
-                <h3 style="color: #1565c0;">Your Privacy Matters</h3>
-                <p><strong>Remember:</strong> Your identity (including email) remains your property. All documents belong only to you. No personal information is collected or shared. From SpreadsheetMemo's perspective, you are anonymous.</p>
-            </div>
+     <section class="privacy-link-section">
+        <div class="privacy-link-content">
+            <h2>Privacy & Security</h2>
+            <p>Your privacy is our top priority. We don't collect any personal information, and all your data stays in your Google Drive.</p>
+            <a href="privacy.html" class="cta-button">Read Our Privacy Policy</a>
         </div>
     </section>
 
