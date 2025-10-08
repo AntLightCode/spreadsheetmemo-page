@@ -36,6 +36,15 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
         }
 
         nav a {
@@ -276,13 +285,21 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+
+            .logo-icon {
+            width: 32px;
+            height: 32px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">SpreadsheetMemo</div>
+            <div class="logo">
+                <img src="assets/images/favicon.svg" alt="SpreadsheetMemo" class="logo-icon">
+                <span>SpreadsheetMemo</span>
+            </div>
             <nav>
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>

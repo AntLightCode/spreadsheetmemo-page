@@ -36,8 +36,17 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
             color: white;
             text-decoration: none;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
         }
 
         nav a {
@@ -169,13 +178,21 @@
             .privacy-content h2 {
                 font-size: 1.5rem;
             }
+
+            .logo-icon {
+                width: 32px;
+                height: 32px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">SpreadsheetMemo</a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon.svg" alt="SpreadsheetMemo" class="logo-icon">
+                <span>SpreadsheetMemo</span>
+            </a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="index.html#features">Features</a>
