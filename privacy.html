@@ -123,32 +123,122 @@
             <h3>1. Introduction</h3>
             <p>SpreadsheetMemo ("I", "my" or "the app") is a flashcard-based learning web application developed by AntLightCode. This privacy policy explains how the app handles your information when you use the service.</p>
 
-            <h3>2. Information Collected by the App</h3>
-            <p><strong>SpreadsheetMemo app does not collect, store, or share any personal information.</strong></p>
-            <p>SpreadsheetMemo operates entirely through Google's infrastructure and requires the following permissions to function:</p>
+            <h3>2. Data Accessed</h3>
+            <p>SpreadsheetMemo accesses the following types of Google user data:</p>
+            <ul>
+                <li><strong>Google Sheets Data:</strong>
+                    <ul>
+                        <li>Content of your SpreadsheetMemo documents (questions, answers, learning progress)</li>
+                        <li>Sheet names and structures within your SpreadsheetMemo documents</li>
+                        <li>Named ranges if used for organizing content</li>
+                    </ul>
+                </li>
+                <li><strong>Google Drive Access:</strong>
+                    <ul>
+                        <li>Limited to SpreadsheetMemo documents only</li>
+                        <li>File metadata (name) for SpreadsheetMemo documents</li>
+                        <li>No access to any other files in your Google Drive</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>The app requires the following Google permissions:</p>
             <ul>
                 <li><strong>View and manage your spreadsheets in Google Drive:</strong> Required to access and modify your SpreadsheetMemo documents for learning purposes.</li>
-                <li><strong>View and manage files in your Google Drive:</strong> Required to locate and open SpreadsheetMemo documents. The app only accesses SpreadsheetMemo documents and has no access to any other files.</li>
+                <li><strong>View and manage files in your Google Drive:</strong> Required to locate and open SpreadsheetMemo documents only.</li>
             </ul>
 
-            <h3>3. How SpreadsheetMemo Uses Your Information</h3>
-            <p>The app accesses your Google Sheets documents solely to:</p>
+            <h3>3. Data Usage and Processing</h3>
+            <p>Here's how SpreadsheetMemo uses and processes your Google user data:</p>
             <ul>
-                <li>Display flashcard content for learning sessions</li>
-                <li>Track your progress within the spreadsheet (marking items as known, unknown, etc.)</li>
-                <li>Allow you to add new flashcard entries</li>
+                <li><strong>Document Access:</strong>
+                    <ul>
+                        <li>Reading flashcard content for display during learning sessions</li>
+                        <li>Adding new flashcard entries when you create content</li>
+                    </ul>
+                </li>
+                <li><strong>Learning Process:</strong>
+                    <ul>
+                        <li>Writing learning progress updates, difficulty ratings for each flashcard</li>
+                        <li>Maintaining user preferences (selected document, sheet, learning mode settings, number of items per lesson)</li>
+                    </ul>
+                </li>
+                <li><strong>Content Management:</strong>
+                    <ul>
+                        <li>Creating new SpreadsheetMemo documents</li>
+                        <li>Copying sample SpreadsheetMemo documents with pre-filled content (examples of how the app can be used)</li>
+                    </ul>
+                </li>
             </ul>
-            <p><strong>All data remains in your Google Drive and is never transmitted to or stored on any servers.</strong></p>
+            <p><strong>Note:</strong> User preferences are stored using Google Apps Script's Properties Service, which keeps this data within your Google account. This data helps provide a personalized learning experience and maintain your settings between sessions.</p>
+            <p><strong>Important: All data processing happens within your browser and Google's infrastructure. No data is transmitted to or processed on external servers.</strong></p>
 
-            <h3>4. Data Storage and Security</h3>
+            <h3>4. Data Storage and Protection</h3>
             <ul>
-                <li>All your flashcard data is stored in your own Google Drive account</li>
-                <li>SpreadsheetMemo does not maintain any databases or servers that store user data</li>
-                <li>Your documents belong only to you</li>
-                <li>All connections are made via secure HTTPS protocol</li>
+                <li><strong>Storage Location:</strong>
+                    <ul>
+                        <li>All data is stored exclusively in your Google Drive account</li>
+                        <li>SpreadsheetMemo does not maintain any separate databases or servers</li>
+                        <li>No data is cached or stored locally beyond your browser session</li>
+                    </ul>
+                </li>
+                <li><strong>Security Measures:</strong>
+                    <ul>
+                        <li>All connections use secure HTTPS protocol</li>
+                        <li>Authentication handled through Google's secure OAuth 2.0 system</li>
+                        <li>No passwords or credentials are ever stored by the app</li>
+                        <li>Benefits from Google's enterprise-grade security infrastructure</li>
+                    </ul>
+                </li>
             </ul>
 
-            <h3>5. Google Authorization</h3>
+            <h3>5. Data Sharing</h3>
+            <p><strong>SpreadsheetMemo does not share your data with any third parties.</strong> Specifically:</p>
+            <ul>
+                <li><strong>No Data Sharing:</strong>
+                    <ul>
+                        <li>Your data remains exclusively within your Google account</li>
+                        <li>No data is shared with external services or third parties</li>
+                        <li>No analytics or tracking services are used</li>
+                        <li>No user behavior or usage data is collected or shared</li>
+                    </ul>
+                </li>
+                <li><strong>Collaborative Features:</strong>
+                    <ul>
+                        <li>Document sharing is managed entirely through Google Drive's sharing features</li>
+                        <li>You control who can access your documents through Google Drive settings</li>
+                        <li>The app does not facilitate or manage any sharing outside of Google Drive</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>6. Data Retention and Deletion</h3>
+            <p>SpreadsheetMemo follows these data retention and deletion practices:</p>
+            <ul>
+                <li><strong>Data Retention:</strong>
+                    <ul>
+                        <li>Your flashcard content exists only in your Google Drive</li>
+                        <li>The app stores minimal user preferences (selected document, sheet, number of items, learning mode settings) using Google Apps Script's Properties Service.
+                            <br>These properties are stored in your Google account, not on external servers.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Data Deletion:</strong>
+                    <ul>
+                        <li>You can delete your SpreadsheetMemo documents at any time through Google Drive</li>
+                        <li>Deleted documents are handled according to your Google Drive trash settings</li>
+                        <li>No additional steps are needed as no data exists outside Google Drive</li>
+                    </ul>
+                </li>
+                <li><strong>Account Deletion Process:</strong>
+                    <ul>
+                        <li>Revoke SpreadsheetMemo's access through Google Account settings</li>
+                        <li>Delete any SpreadsheetMemo documents you no longer want</li>
+                        <li>No further action required as no other data exists</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>7. Google Authorization</h3>
             <p>SpreadsheetMemo uses Google's OAuth 2.0 for authentication. This means:</p>
             <ul>
                 <li>Your email, login, password, and personal information are NOT passed to SpreadsheetMemo</li>
@@ -157,15 +247,27 @@
                 <li>SpreadsheetMemo only receive authorization to access specific Google Drive files on your behalf</li>
             </ul>
 
-            <h3>6. Third-Party Services</h3>
+            <h3>8. Third-Party Services and API Compliance</h3>
             <p>SpreadsheetMemo is built on Google Apps Script platform and uses:</p>
             <ul>
                 <li>Google Sheets API (for spreadsheet access)</li>
                 <li>Google Drive API (for file management)</li>
             </ul>
             <p>These services operate under their own privacy policies. Google's privacy policy can be found at: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <div class="highlight-box">
+                <h4>Google API Services Compliance</h4>
+                <p>SpreadsheetMemo strictly adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>. This includes:</p>
+                <ul>
+                    <li>Limited Use requirements for API Data</li>
+                    <li>Transparent handling of user data</li>
+                    <li>No unauthorized data sharing or selling</li>
+                    <li>Secure data handling practices</li>
+                    <li>Clear data access and deletion procedures</li>
+                </ul>
+            </div>
 
-            <h3>7. User Rights</h3>
+            <h3>9. User Rights</h3>
             <p>You have complete control over your data:</p>
             <ul>
                 <li><strong>Access:</strong> All your data is in your Google Drive and accessible at any time</li>
