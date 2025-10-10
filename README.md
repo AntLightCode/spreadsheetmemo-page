@@ -1,3 +1,3 @@
 https://spreadsheetmemo.com/
 
-Homepage for **flashcard-based learning web app** that combines the flexibility of **Google Sheets** with effective memorization techniques.
+Homepage for SpreadsheetMemo – a **flashcard-based learning web app** combining the flexibility of **Google Sheets** with effective memorization techniques.
