@@ -126,25 +126,17 @@
             <h3>2. Data Accessed</h3>
             <p>SpreadsheetMemo accesses the following types of Google user data:</p>
             <ul>
-                <li><strong>Google Sheets Data:</strong>
+                <li><strong>Google Sheets & Drive Data:</strong>
                     <ul>
-                        <li>Content of your SpreadsheetMemo documents (questions, answers, learning progress)</li>
-                        <li>Sheet names and structures within your SpreadsheetMemo documents</li>
-                        <li>Named ranges if used for organizing content</li>
-                    </ul>
-                </li>
-                <li><strong>Google Drive Access:</strong>
-                    <ul>
-                        <li>Limited to SpreadsheetMemo documents only</li>
-                        <li>File metadata (name) for SpreadsheetMemo documents</li>
-                        <li>No access to any other files in your Google Drive</li>
+                        <li>The content of spreadsheets you create with or open in SpreadsheetMemo (questions, answers, progress).</li>
+                        <li>The structure of these spreadsheets (e.g., sheet names).</li>
+                        <li>File metadata (like the name) for these specific documents.</li>
                     </ul>
                 </li>
             </ul>
-            <p>The app requires the following Google permissions:</p>
+            <p>To ensure maximum privacy, the app requires only one, very specific Google permission:</p>
             <ul>
-                <li><strong>View and manage your spreadsheets in Google Drive:</strong> Required to access and modify your SpreadsheetMemo documents for learning purposes.</li>
-                <li><strong>View and manage files in your Google Drive:</strong> Required to locate and open SpreadsheetMemo documents only.</li>
+                <li><strong>View and manage Google Drive files and folders that you have opened or created with this app:</strong> This permission corresponds to the <code>drive.file</code> scope, which is the most restrictive permission available, as <a href="https://developers.google.com/workspace/drive/api/guides/api-specific-auth#benefits" target="_blank" rel="noopener noreferrer">recommended by Google</a> for enhanced security. It means SpreadsheetMemo can <strong>only</strong> access files it creates or that you explicitly open with it. The app has <strong>no access</strong> to any other files in your Google Drive.</li>
             </ul>
 
             <h3>3. Data Usage and Processing</h3>
@@ -250,8 +242,8 @@
                 </li>
                 <li><strong>Google Services Used:</strong>
                     <ul>
-                        <li><a href="https://developers.google.com/workspace/sheets/api/guides/concepts target="_blank">Google Sheets API</a> (for flashcard content)</li>
-                        <li><a href="https://developers.google.com/workspace/drive/api/guides/about-sdk target="_blank">Google Drive API</a> (for document management)</li>
+                        <li><a href="https://developers.google.com/workspace/sheets/api/reference/rest" target="_blank">Google Sheets API</a> (for flashcards content)</li>
+                        <li><a href="https://developers.google.com/workspace/drive/api/reference/rest" target="_blank">Google Drive API</a> (for the listing of SpreadsheetMemo documents)</li>
                         <li><a href="https://developers.google.com/apps-script/guides/properties" target="_blank">Google Apps Script's Properties Service</a> (for user preferences)</li>
                     </ul>
                 </li>
