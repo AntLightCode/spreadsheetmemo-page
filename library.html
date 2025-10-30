@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse the Library - SpreadsheetMemo</title>
+    <meta name="description" content="Browse a library of community-created flashcard sets to import into your SpreadsheetMemo. Coming soon!">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.svg">
+    <style>
+        .coming-soon-section {
+            background: #f9f9f9;
+            padding: 6rem 2rem;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .coming-soon-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .coming-soon-content .icon {
+            font-size: 5rem;
+            color: #1565c0;
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .coming-soon-content h1 {
+            font-size: 3rem;
+            color: #1e88e5;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-content p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 768px) {
+            .coming-soon-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon.svg" alt="SpreadsheetMemo" class="logo-icon">
+                <span>SpreadsheetMemo</span>
+            </a>
+            <nav>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="library.html">Browse the Library</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="coming-soon-section">
+        <div class="coming-soon-content">
+            <div class="icon"><i class="fa-solid fa-rocket"></i></div>
+            <h1>Coming Soon!</h1>
+            <p>A new feature is on its way! Soon you'll be able to browse a library of ready-to-use documents and import them directly into SpreadsheetMemo to start learning instantly.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2016 - 2025 SpreadsheetMemo by AntLightCode. All rights reserved.</p>
+    </footer>
+</body>
+</html>
