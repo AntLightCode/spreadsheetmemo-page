@@ -99,6 +99,9 @@ footer {
         width: 32px;
         height: 32px;
     }
+    .hide-on-mobile {
+        display: none;
+    }
 }
 
 /* Library Link Styles */
