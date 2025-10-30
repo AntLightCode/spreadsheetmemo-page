@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="common.css">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.svg">
     <style> 
+        .nav-library-link {
+            background-color: #ffc107;
+            color: #333 !important;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .nav-library-link:hover {
+            background-color: #ffca2c;
+            transform: translateY(-1px);
+        }
+        .nav-library-link i {
+            margin-right: 6px;
+        }
 
         .privacy-section {
             background: #f9f9f9;
@@ -110,7 +125,7 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="index.html#features">Features</a>
-                <a href="library.html">Browse the Library</a>
+                <a href="library.html" class="nav-library-link"><i class="fa-solid fa-swatchbook"></i>Browse the Library</a>
                 <a href="index.html#how-it-works">How It Works</a>
                 <a href="https://youtu.be/GBvcCzdy9vc?t=24" target="_blank">Tutorial</a>
             </nav>
@@ -331,6 +346,7 @@
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="https://script.google.com/macros/s/AKfycbyVrzuFuKPW3iz0w8rnZzmrqAmULVsQx0ntRlUJNdG2ny9RJR5c/exec">Start Learning</a>
+            <a href="library.html"><i class="fa-solid fa-swatchbook"></i> Browse the Library</a>
             <a href="https://youtu.be/GBvcCzdy9vc?t=24" target="_blank">Tutorial</a>
             <a href="https://www.facebook.com/SpreadsheetMemo" target="_blank">Facebook</a>
             <a href="https://discord.gg/Rpa8mgfJ" target="_blank">Discord</a>
