@@ -110,7 +110,7 @@
                 <a href="index.html">Home</a>
                 <a href="library.html" class="nav-library-link"><i class="fa-solid fa-building-columns"></i> <span class="hide-on-mobile">Browse the </span>Library</a>
                 <a href="index.html#how-it-works">How It Works</a>
-                <a href="https://youtu.be/GBvcCzdy9vc" target="_blank">Video Tutorial</a>
+                <a href="https://youtu.be/GBvcCzdy9vc" target="_blank" rel="noopener noreferrer">Video Tutorial</a>
             </nav>
         </div>
     </header>
@@ -160,8 +160,9 @@
                     </ul>
                 </li>
             </ul>
-            <p><strong>Note:</strong> User preferences are stored using <a href="https://developers.google.com/apps-script/guides/properties" target="_blank">Google Apps Script's Properties Service</a>, which keeps this data within your Google account. This data helps provide a personalized learning experience and maintain your settings between sessions.</p>
+            <p><strong>Note:</strong> User preferences are stored using <a href="https://developers.google.com/apps-script/guides/properties" target="_blank" rel="noopener noreferrer">Google Apps Script's Properties Service</a>, which keeps this data within your Google account. This data helps provide a personalized learning experience and maintain your settings between sessions.</p>
             <p><strong>Important: All data processing happens within your browser and Google's infrastructure. No data is transmitted to or processed on external servers.</strong></p>
+            <p>All processing described above applies <strong>only</strong> to the files you have explicitly opened or created with SpreadsheetMemo, in line with the restrictive <a href="https://developers.google.com/workspace/drive/api/guides/api-specific-auth#benefits" target="_blank" rel="noopener noreferrer"><code>drive.file</code></a> permission scope.</p>
 
             <h3>4. Data Storage and Protection</h3>
             <ul>
@@ -208,7 +209,7 @@
                 <li><strong>Data Retention:</strong>
                     <ul>
                         <li>Your flashcard content exists only in your Google Drive</li>
-                        <li>The app stores minimal user preferences (selected document, sheet, number of items, learning mode settings) using <a href="https://developers.google.com/apps-script/guides/properties" target="_blank">Google Apps Script's Properties Service</a>.
+                        <li>The app stores minimal user preferences (selected document, sheet, number of items, learning mode settings) using <a href="https://developers.google.com/apps-script/guides/properties" target="_blank" rel="noopener noreferrer">Google Apps Script's Properties Service</a>.
                             <br>These properties are stored in your Google account, not on external servers.
                         </li>
                     </ul>
@@ -237,27 +238,28 @@
                         <li>Uses Google's OAuth 2.0 for secure authentication</li>
                         <li>Your email, login, and password remain with Google</li>
                         <li>You remain anonymous from SpreadsheetMemo's perspective</li>
+                        <li>The app uses the most restrictive <a href="https://developers.google.com/workspace/drive/api/guides/api-specific-auth#benefits" target="_blank" rel="noopener noreferrer"><code>drive.file</code></a> scope, ensuring it can only access files you explicitly open or create with it.</li>
                     </ul>
                 </li>
                 <li><strong>Google Services Used:</strong>
                     <ul>
-                        <li><a href="https://developers.google.com/workspace/sheets/api/reference/rest" target="_blank">Google Sheets API</a> (for flashcards content)</li>
-                        <li><a href="https://developers.google.com/workspace/drive/api/reference/rest" target="_blank">Google Drive API</a> (for the listing of SpreadsheetMemo documents)</li>
-                        <li><a href="https://developers.google.com/apps-script/guides/properties" target="_blank">Google Apps Script's Properties Service</a> (for user preferences)</li>
+                        <li><a href="https://developers.google.com/workspace/sheets/api/reference/rest" target="_blank" rel="noopener noreferrer">Google Sheets API</a> (for flashcards content)</li>
+                        <li><a href="https://developers.google.com/workspace/drive/api/reference/rest" target="_blank" rel="noopener noreferrer">Google Drive API</a> (for the listing of SpreadsheetMemo documents)</li>
+                        <li><a href="https://developers.google.com/apps-script/guides/properties" target="_blank" rel="noopener noreferrer">Google Apps Script's Properties Service</a> (for user preferences)</li>
                     </ul>
                 </li>
             </ul>
             
             <div class="highlight-box">
                 <h4>Google API Services Compliance</h4>
-                <p>SpreadsheetMemo strictly adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, ensuring:</p>
+                <p>SpreadsheetMemo strictly adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, ensuring:</p>
                 <ul>
                     <li>Limited and transparent data usage</li>
                     <li>No unauthorized data sharing</li>
                     <li>Secure data handling</li>
                     <li>Clear data management procedures</li>
                 </ul>
-                <p>For more details, see Google's <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>.</p>
+                <p>For more details, see Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
             </div>
 
             <h3>8. User Rights and Control</h3>
@@ -273,7 +275,7 @@
                 </li>
                 <li><strong>App Access Control:</strong>
                     <ul>
-                        <li>Revoke app access anytime via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Settings</a> or use the uninstall link in Google's welcome email</li>
+                        <li>Revoke app access anytime via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google Account Settings</a> or use the uninstall link in Google's welcome email</li>
                         <li>Your documents remain in Google Drive after uninstalling</li>
                         <li>Preferences and removed upon access revocation</li>
                     </ul>
@@ -312,14 +314,15 @@
             <p>For questions about this privacy policy or SpreadsheetMemo:</p>
             <ul>
                 <li><strong>E-mail:</strong> <a href="mailto:AntLightCode@gmail.com">AntLightCode@gmail.com</a></li>
-                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/SpreadsheetMemo" target="_blank">facebook.com/SpreadsheetMemo</a></li>
-                <li><strong>Discord:</strong> <a href="https://discord.gg/Rpa8mgfJ" target="_blank">discord.gg/Rpa8mgfJ</a></li>
-                <li><strong>X (Twitter):</strong> <a href="https://x.com/SpreadsheetMemo" target="_blank">x.com/SpreadsheetMemo</a></li>
+                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/SpreadsheetMemo" target="_blank" rel="noopener noreferrer">facebook.com/SpreadsheetMemo</a></li>
+                <li><strong>Discord:</strong> <a href="https://discord.gg/Rpa8mgfJ" target="_blank" rel="noopener noreferrer">discord.gg/Rpa8mgfJ</a></li>
+                <li><strong>X (Twitter):</strong> <a href="https://x.com/SpreadsheetMemo" target="_blank" rel="noopener noreferrer">x.com/SpreadsheetMemo</a></li>
             </ul>
 
             <div class="highlight-box-blue">
                 <h3>Your Privacy Matters</h3>
                 <p><strong>Remember:</strong> Your identity (including email) remains your property. All documents belong only to you. No personal information is collected or shared. From SpreadsheetMemo's perspective, you are anonymous.</p>
+                <p>The app can only access files you create with it or explicitly open, giving you full control over your data.</p>
             </div>
         </div>
     </section>
@@ -330,10 +333,10 @@
             <a href="index.html">Home</a>
             <a href="https://script.google.com/macros/s/AKfycbyVrzuFuKPW3iz0w8rnZzmrqAmULVsQx0ntRlUJNdG2ny9RJR5c/exec">Start Learning</a>
             <a href="library.html"><i class="fa-solid fa-building-columns"></i> <span class="hide-on-mobile">Browse the </span>Library</a>
-            <a href="https://youtu.be/GBvcCzdy9vc" target="_blank">Video Tutorial</a>
-            <a href="https://www.facebook.com/SpreadsheetMemo" target="_blank">Facebook</a>
-            <a href="https://discord.gg/Rpa8mgfJ" target="_blank">Discord</a>
-            <a href="https://x.com/SpreadsheetMemo" target="_blank">X</a>
+            <a href="https://youtu.be/GBvcCzdy9vc" target="_blank" rel="noopener noreferrer">Video Tutorial</a>
+            <a href="https://www.facebook.com/SpreadsheetMemo" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://discord.gg/Rpa8mgfJ" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="https://x.com/SpreadsheetMemo" target="_blank" rel="noopener noreferrer">X</a>
         </div>
         <p class="footer-credit">
             Crafted with ❤️ as a passion project
