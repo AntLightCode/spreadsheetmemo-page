@@ -34,27 +34,17 @@
     margin-right: 0.5rem;
 }
 
-.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .feature-card { padding: 2rem; background: #f5f5f5; border-radius: 8px; transition: transform 0.3s; }
 .feature-card:hover { transform: translateY(-4px); }
 .feature-card h3 { color: #1565c0; margin-bottom: 1rem; }
 
 .privacy-link-section {
-    background: #e3f2fd;
-    padding: 3rem 2rem;
     text-align: center;
 }
 .privacy-link-content {
     max-width: 800px;
     margin: 0 auto;
-}
-.privacy-link-content h2 {
-    color: #1565c0;
-    margin-bottom: 1rem;
-}
-.privacy-link-content p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
