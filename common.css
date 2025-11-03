@@ -1,3 +1,4 @@
+/* General & Reusable Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,47 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1565c0;
+    text-align: center;
+}
+
+.section-highlight {
+    background: linear-gradient(to bottom, #f5f5f5 0%, white 100%);
+    padding: 4rem 2rem;
+}
+
+.alert {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #1565c0;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+    margin: 0.5rem;
 }
 
 header {
@@ -119,4 +161,12 @@ footer {
 }
 .nav-library-link i {
     margin-right: 6px;
+}
+
+/* Video Styles */
+.video-container {
+    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 1000px; margin: 2rem auto 0; background: #000; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+.video-container iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
 }
