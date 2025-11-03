@@ -137,6 +137,7 @@ footer {
     }
     nav a {
         margin: 0 0.5rem;
+        font-size: 85%;
     }
     .logo-icon {
         width: 32px;
