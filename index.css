@@ -39,9 +39,6 @@
 .feature-card:hover { transform: translateY(-4px); }
 .feature-card h3 { color: #1565c0; margin-bottom: 1rem; }
 
-.privacy-link-section {
-    text-align: center;
-}
 .privacy-link-content {
     max-width: 800px;
     margin: 0 auto;

@@ -52,10 +52,10 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
     color: white;
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
 }
 
 .header-content {
