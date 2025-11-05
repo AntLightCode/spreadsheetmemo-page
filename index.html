@@ -150,6 +150,12 @@
         </div>
     </section>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <footer>
         <p>&copy; 2016 - 2025 SpreadsheetMemo by AntLightCode. All rights reserved.</p>
         <div class="footer-links">
@@ -164,5 +170,41 @@
             Crafted with ❤️ as a passion project
         </p>    
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeBtn = document.querySelector('.modal-close');
+            const triggerImages = document.querySelectorAll('.feature-screenshot img');
+
+            triggerImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                });
+            });
+
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            closeBtn.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape" && modal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
