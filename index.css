@@ -57,7 +57,6 @@
 .feature-screenshot {
     position: relative;
     overflow: hidden;
-    /* aspect-ratio: 16 / 9; */ /* Replaced by fixed height and flex centering */
     height: 180px; /* You can adjust this value */
 }
 .feature-screenshot img {
