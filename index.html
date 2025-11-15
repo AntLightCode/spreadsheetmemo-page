@@ -76,7 +76,7 @@
             <div class="features">
                 <div class="feature-card">
                     <div class="feature-screenshot">
-                        <img src="assets/images/hero-bg.png" alt="Effective Learning Method Screenshot">
+                        <img src="assets/images/features/thumbnails/learning_method.png" data-large-src="assets/images/hero-bg.png" alt="Effective Learning Method Screenshot">
                     </div>
                     <div class="feature-card-content">
                         <h3><i class="fa-solid fa-brain"></i>Effective Learning Method</h3>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-screenshot">
-                        <img src="assets/images/features/documents.png" alt="Multiple Documents Screenshot">
+                        <img src="assets/images/features/thumbnails/documents.png" data-large-src="assets/images/features/documents.png" alt="Multiple Documents Screenshot">
                     </div>
                     <div class="feature-card-content">
                         <h3><i class="fa-solid fa-file-alt"></i>Multiple Documents</h3>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-screenshot">
-                        <img src="assets/images/features/rich_content.png" alt="Rich Content Support Screenshot">
+                        <img src="assets/images/features/thumbnails/rich_content.png" data-large-src="assets/images/features/rich_content.png" alt="Rich Content Support Screenshot">
                     </div>
                     <div class="feature-card-content">
                         <h3><i class="fa-solid fa-image"></i>Rich Content Support</h3>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-screenshot">
-                        <img src="assets/images/features/mobile.png" alt="Mobile Compatible Screenshot">
+                        <img src="assets/images/features/thumbnails/mobile.png" data-large-src="assets/images/features/mobile.png" alt="Mobile Compatible Screenshot">
                     </div>
                     <div class="feature-card-content">
                         <h3><i class="fa-solid fa-mobile-screen-button"></i>Mobile Compatible</h3>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-screenshot">
-                        <img src="assets/images/features/customization.png" alt="Lesson Customization Screenshot">
+                        <img src="assets/images/features/thumbnails/customization.png" data-large-src="assets/images/features/customization.png" alt="Lesson Customization Screenshot">
                     </div>
                     <div class="feature-card-content">
                         <h3><i class="fa-solid fa-layer-group"></i>Lesson Customization</h3>
@@ -122,7 +122,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-screenshot">
-                        <img src="assets/images/features/security.png" alt="Private & Secure Screenshot">
+                        <img src="assets/images/features/thumbnails/security.png" data-large-src="assets/images/features/security.png" alt="Private & Secure Screenshot">
                     </div>
                     <div class="feature-card-content">
                         <h3><i class="fa-solid fa-lock"></i>Private & Secure</h3>
@@ -182,7 +182,7 @@
             triggerImages.forEach(img => {
                 img.addEventListener('click', function() {
                     modal.style.display = 'flex';
-                    modalImg.src = this.src;
+                    modalImg.src = this.dataset.largeSrc || this.src;
                     document.body.style.overflow = 'hidden'; // Prevent background scrolling
                 });
             });
