@@ -182,7 +182,11 @@
             triggerImages.forEach(img => {
                 img.addEventListener('click', function() {
                     modal.style.display = 'flex';
-                    modalImg.src = this.dataset.largeSrc || this.src;
+                    // On mobile, use the thumbnail src. On desktop, use the large version if available.
+                    const isMobile = window.innerWidth <= 768;
+                    modalImg.src = isMobile 
+                        ? this.src 
+                        : (this.dataset.largeSrc || this.src);
                     document.body.style.overflow = 'hidden'; // Prevent background scrolling
                 });
             });
