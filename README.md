@@ -1,5 +1,7 @@
 # 📚 SpreadsheetMemo
 
+![SpreadsheetMemo Hero](https://spreadsheetmemo.com/assets/images/hero-bg.png)
+
 **SpreadsheetMemo** is a free, flashcard-based learning web application that uses the power of Google Sheets to store your content, allowing you to memorize things quickly and effectively.
 
 🌐 **Live at**: [spreadsheetmemo.com](https://spreadsheetmemo.com)
