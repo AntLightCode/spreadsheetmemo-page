@@ -1,35 +1,53 @@
-.coming-soon-section {
+.library-section {
     background: #f9f9f9;
     padding: 6rem 2rem;
     min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.library-content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.coming-soon-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.coming-soon-content .icon {
+.library-content .icon {
     font-size: 5rem;
     color: #1565c0;
     margin-bottom: 2rem;
     animation: float 3s ease-in-out infinite;
 }
 
-.coming-soon-content h1 {
+.library-content h1 {
     font-size: 3rem;
     color: #1e88e5;
     margin-bottom: 1rem;
 }
 
-.coming-soon-content p {
+.library-content p {
     font-size: 1.2rem;
     color: #555;
     line-height: 1.6;
+}
+
+.contribution-box {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.contribution-box h2 {
+    color: #1565c0;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.contribution-box p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
 }
 
 @keyframes float {
@@ -39,7 +57,7 @@
 }
 
 @media (max-width: 768px) {
-    .coming-soon-content h1 {
+    .library-content h1 {
         font-size: 2.2rem;
     }
 }

@@ -78,6 +78,23 @@
     text-align: center;
 }
 
+/* Community Library Section */
+.community-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+}
+.community-content h3 {
+    color: #1565c0;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.community-content .cta-button { margin-top: 1rem; }
+.community-content .cta-button.secondary { background: transparent; border: 2px solid #1565c0; }
+
 @media (max-width: 768px) {
     .hero h1 { font-size: 1.8rem; }
     .hero p { font-size: 1rem; }
