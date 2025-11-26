@@ -1,16 +1,22 @@
-.library-section {
+.library-intro-box {
     background: #f9f9f9;
-    padding: 6rem 2rem;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.library-content {
+.library-intro-box h1 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 1rem;
+}
+.library-intro-box p {
+    font-size: 1.1rem;
+    color: #555;
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .library-content .icon {
@@ -20,20 +26,7 @@
     animation: float 3s ease-in-out infinite;
 }
 
-.library-content h1 {
-    font-size: 3rem;
-    color: #1e88e5;
-    margin-bottom: 1rem;
-}
-
-.library-content p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-}
-
 .contribution-box {
-    margin-top: 3rem;
     padding: 2rem;
     background: #fff;
     border-radius: 8px;
@@ -56,8 +49,182 @@
     100% { transform: translateY(0px); }
 }
 
+/* Library Browser Section */
+.library-browser-section {
+    padding: 2rem;
+    background: #fff;
+}
+
+.library-browser {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.library-category {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.library-category summary {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1565c0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.library-category summary:hover {
+    background-color: #f1f1f1;
+}
+
+.library-category summary::after {
+    content: '\f078'; /* Font Awesome chevron-down */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.library-category[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+.library-category-content {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.library-folder {
+    margin-left: 1rem;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.library-folder summary {
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.library-folder summary::after {
+    font-size: 0.9rem;
+}
+
+.library-file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    gap: 1rem;
+}
+
+.library-file:last-child {
+    border-bottom: none;
+}
+
+.file-name {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.file-name h3 {
+    font-size: inherit; /* Inherit font-size from .file-name */
+    font-weight: normal; /* Reset bold from h3 */
+    margin: 0; /* Reset default margin from h3 */
+}
+
+.file-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.file-actions a, .file-actions button {
+    color: #555;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.file-actions a:hover, .file-actions button:hover {
+    color: #1565c0;
+    transform: scale(1.1);
+}
+
+a.import-button {
+    background: #28a745; /* Green CTA */
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+a.import-button:hover {
+    background: #218838; /* Darker green on hover */
+    color: white !important;
+}
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+.toast-notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -10px);
+}
+
+
 @media (max-width: 768px) {
-    .library-content h1 {
-        font-size: 2.2rem;
+    .library-file {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
     }
+    .file-name {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .file-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .import-button {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+/* Contribution Section at the bottom */
+.contribution-section {
+    padding: 0 2rem 2rem 2rem;
+}
 }
