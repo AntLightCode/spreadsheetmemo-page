@@ -221,6 +221,13 @@ a.import-button:hover {
         flex-grow: 1;
         text-align: center;
     }
+    .library-browser-section {
+        padding: 2rem 1rem; /* Reduce horizontal padding on mobile */
+    }
+    .library-folder {
+        margin-left: 0.5rem;
+        padding-left: 0.75rem;
+    }
 }
 
 /* Contribution Section at the bottom */
