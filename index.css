@@ -134,6 +134,26 @@
     cursor: pointer;
 }
 
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 16px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.modal-nav:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-prev { left: 10px; }
+.modal-next { right: 10px; }
+
 @keyframes zoomIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }

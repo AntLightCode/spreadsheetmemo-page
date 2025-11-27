@@ -198,6 +198,8 @@
     <!-- Image Modal -->
     <div id="imageModal" class="modal">
         <span class="modal-close">&times;</span>
+        <span class="modal-nav modal-prev">&#10094;</span>
+        <span class="modal-nav modal-next">&#10095;</span>
         <img class="modal-content" id="modalImage">
     </div>
 
@@ -221,19 +223,31 @@
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
             const closeBtn = document.querySelector('.modal-close');
+            const prevBtn = document.querySelector('.modal-prev');
+            const nextBtn = document.querySelector('.modal-next');
             const triggerImages = document.querySelectorAll('.feature-screenshot img');
+            let currentIndex = 0;
 
             triggerImages.forEach(img => {
                 img.addEventListener('click', function() {
-                    modal.style.display = 'flex';
-                    // On mobile, use the thumbnail src. On desktop, use the large version if available.
-                    const isMobile = window.innerWidth <= 768;
-                    modalImg.src = isMobile 
-                        ? this.src 
-                        : (this.dataset.largeSrc || this.src);
-                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    const imagesArray = Array.from(triggerImages);
+                    currentIndex = imagesArray.indexOf(this);
+                    showImage(currentIndex);
                 });
             });
+
+            function showImage(index) {
+                const img = triggerImages[index];
+                const isMobile = window.innerWidth <= 768;
+                modalImg.src = isMobile 
+                    ? img.src 
+                    : (img.dataset.largeSrc || img.src);
+                
+                if (modal.style.display !== 'flex') {
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            }
 
             function closeModal() {
                 modal.style.display = 'none';
@@ -242,6 +256,16 @@
 
             closeBtn.addEventListener('click', closeModal);
 
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : triggerImages.length - 1;
+                showImage(currentIndex);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex < triggerImages.length - 1) ? currentIndex + 1 : 0;
+                showImage(currentIndex);
+            });
+
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
                     closeModal();
@@ -249,8 +273,14 @@
             });
 
             document.addEventListener('keydown', function(e) {
-                if (e.key === "Escape" && modal.style.display === 'flex') {
+                if (modal.style.display !== 'flex') return;
+
+                if (e.key === "Escape") {
                     closeModal();
+                } else if (e.key === "ArrowLeft") {
+                    prevBtn.click();
+                } else if (e.key === "ArrowRight") {
+                    nextBtn.click();
                 }
             });
         });
