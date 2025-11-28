@@ -86,3 +86,68 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.focus();
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modalBackdrop = document.getElementById('share-modal-backdrop');
+    if (!modalBackdrop) return;
+
+    const modal = document.getElementById('share-modal');
+    const modalTitle = document.getElementById('share-modal-title');
+    const shareLinkInput = document.getElementById('share-link-input');
+    const copyShareLinkBtn = document.getElementById('copy-share-link-btn');
+    const closeModalBtn = document.getElementById('share-modal-close-btn');
+    const toast = document.getElementById('toast');
+
+    const socialLinks = {
+        facebook: document.getElementById('share-facebook'),
+        x: document.getElementById('share-x'),
+        linkedin: document.getElementById('share-linkedin'),
+        reddit: document.getElementById('share-reddit'),
+    };
+
+    const openModal = (fileElement) => {
+        const fileId = fileElement.id;
+        const fileName = fileElement.querySelector('.file-name h3').textContent;
+        const shareUrl = `https://spreadsheetmemo.com/library.html#${fileId}`;
+        const shareText = `Check out this flashcard set: ${fileName}`;
+
+        modalTitle.textContent = `Share "${fileName}"`;
+        shareLinkInput.value = shareUrl;
+
+        socialLinks.facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        socialLinks.x.href = `https://x.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+        socialLinks.linkedin.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareText)}`;
+        socialLinks.reddit.href = `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(fileName)}`;
+
+        modalBackdrop.classList.add('show');
+    };
+
+    const closeModal = () => {
+        modalBackdrop.classList.remove('show');
+    };
+
+    document.querySelectorAll('.share-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const fileElement = e.target.closest('.library-file');
+            if (fileElement) {
+                openModal(fileElement);
+            }
+        });
+    });
+
+    copyShareLinkBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(shareLinkInput.value).then(() => {
+            toast.textContent = 'Share link copied!';
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.textContent = 'Link copied to clipboard!'; // Reset text
+            }, 2000);
+        }).catch(err => console.error('Failed to copy share link: ', err));
+    });
+
+    closeModalBtn.addEventListener('click', closeModal);
+    modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) closeModal();
+    });
+});
