@@ -87,4 +87,7 @@
     .privacy-content h2 {
         font-size: 1.5rem;
     }
+    .privacy-section {
+        padding: 2rem 0.8rem;
+    }
 }

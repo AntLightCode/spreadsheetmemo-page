@@ -300,17 +300,21 @@ a.import-button:hover {
         text-align: center;
     }
     .library-browser-section {
-        padding: 2rem 1rem; /* Reduce horizontal padding on mobile */
+        padding: 2rem 0.8rem; /* Reduce horizontal padding on mobile */
     }
     .library-folder {
         margin-left: 0.5rem;
         padding-left: 0.75rem;
     }
+    .contribution-section .library-browser {
+        padding: 0 0.8rem 2rem;
+    }
 }
 
 /* Contribution Section at the bottom */
 .contribution-section {
-    padding: 0 2rem 2rem 2rem;
+    /* Padding is now handled by the .library-browser inside this section */
+    padding-bottom: 2rem;
 }
 
 .coming-soon-section {
