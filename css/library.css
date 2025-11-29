@@ -243,6 +243,22 @@
     transform: scale(1.1);
 }
 
+/* Style for highlighting a file from a direct link */
+.library-file.highlight {
+    
+    position: relative; /* Needed for the pseudo-element if we were to use one */
+    /* Animate from a strong color to a subtle permanent background */
+    animation: highlight-to-permanent 2.5s ease-out forwards;
+}
+
+@keyframes highlight-to-permanent {
+    0% { background-color: #fff4c2; } /* Strong yellow start */
+    30% { background-color: #fff4c2; }
+    100% { background-color: #eef6ff; } /* Subtle light blue end state */
+}
+
+
+
 a.import-button {
     background: #28a745; /* Green CTA */
     color: white !important;

@@ -162,3 +162,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modalBackdrop) closeModal();
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Highlight element from URL hash on page load
+    const highlightElementFromHash = () => {
+        const hash = window.location.hash;
+        if (!hash) return;
+
+        // The ID is the hash without the '#'
+        const elementId = hash.substring(1);
+        const targetElement = document.getElementById(elementId);
+
+        if (targetElement) {
+            // Open all parent <details> elements to make the item visible
+            let parent = targetElement.parentElement;
+            while (parent) {
+                if (parent.tagName === 'DETAILS') {
+                    parent.open = true;
+                }
+                parent = parent.parentElement;
+            }
+
+            // Scroll to the element and highlight it
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetElement.classList.add('highlight');
+        }
+    };
+
+    highlightElementFromHash();
+});
