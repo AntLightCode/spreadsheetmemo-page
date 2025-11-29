@@ -397,14 +397,22 @@ a.import-button:hover {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.75rem;
+        padding-left: 0; /* Remove horizontal padding from the file container */
+        padding-right: 0;
     }
     .file-name {
         font-size: 1rem;
         margin-bottom: 0.5rem;
+        padding: 0 1rem; /* Add padding to inner elements instead */
+        width: 100%;
     }
     .file-actions {
         width: 100%;
         justify-content: space-between;
+        padding: 0 1rem; /* Add padding to inner elements instead */
+    }
+    .library-category-content {
+        padding: 0 0 1.5rem; /* Remove horizontal padding */
     }
     .import-button {
         flex-grow: 1;
@@ -414,8 +422,8 @@ a.import-button:hover {
         padding: 2rem 0.8rem; /* Reduce horizontal padding on mobile */
     }
     .library-folder {
-        margin-left: 0.15rem;
-        padding-left: 0.15rem;
+        margin-left: 0.8rem;
+        padding-left: 0.8rem;
     }
     .contribution-section .library-browser {
         padding: 0 0.8rem 2rem;
