@@ -111,14 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const shareUrl = `https://spreadsheetmemo.com/library.html#${fileId}`;
         const shareText = `Check out this SpreadsheetMemo flashcard set: ${fileName}`;
 
+        // Update modal content
         modalTitle.textContent = `Share "${fileName}"`;
         shareLinkInput.value = shareUrl;
 
+        // Facebook - only supports URL (fetches metadata from Open Graph tags)
         socialLinks.facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        
+        // X (Twitter) - supports URL and text
         socialLinks.x.href = `https://x.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
-        socialLinks.linkedin.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(fileName)}&summary=${encodeURIComponent(shareText)}`;
-        socialLinks.reddit.href = `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(fileName)}`;
-
+        
+        // LinkedIn - newer sharing endpoint (only URL is reliably supported)
+        socialLinks.linkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+        
+        // Reddit - include more info in the title 
+        const redditTitle = `${fileName} - SpreadsheetMemo Flashcard Set`;
+        socialLinks.reddit.href = `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(redditTitle)}`;
         modalBackdrop.classList.add('show');
     };
 
@@ -126,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBackdrop.classList.remove('show');
     };
 
+    // Attach click handlers to all share buttons
     document.querySelectorAll('.share-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const fileElement = e.target.closest('.library-file');
@@ -135,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Copy share link to clipboard
     copyShareLinkBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(shareLinkInput.value).then(() => {
             toast.textContent = 'Share link copied!';
@@ -146,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }).catch(err => console.error('Failed to copy share link: ', err));
     });
 
+    // Close modal handlers
     closeModalBtn.addEventListener('click', closeModal);
     modalBackdrop.addEventListener('click', (e) => {
         if (e.target === modalBackdrop) closeModal();
