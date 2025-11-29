@@ -414,8 +414,8 @@ a.import-button:hover {
         padding: 2rem 0.8rem; /* Reduce horizontal padding on mobile */
     }
     .library-folder {
-        margin-left: 0.5rem;
-        padding-left: 0.75rem;
+        margin-left: 0.15rem;
+        padding-left: 0.15rem;
     }
     .contribution-section .library-browser {
         padding: 0 0.8rem 2rem;
