@@ -404,6 +404,13 @@ a.import-button:hover {
     .contribution-section .library-browser {
         padding: 0 0.8rem 2rem;
     }
+    .share-modal {
+        padding: 1.2rem 1rem;
+    }
+    .share-modal-header {
+        padding-bottom: 0.8rem;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Contribution Section at the bottom */
