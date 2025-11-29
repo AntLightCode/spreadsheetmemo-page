@@ -163,7 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+// Use the 'load' event to ensure all content is loaded and browser has finished its initial scroll jump.
+// This is more reliable for overriding the default anchor link behavior.
+window.addEventListener('load', () => {
     // Highlight element from URL hash on page load
     const highlightElementFromHash = () => {
         const hash = window.location.hash;
