@@ -246,7 +246,7 @@
 /* Style for highlighting a file from a direct link */
 .library-file.highlight {
     
-    position: relative; /* Needed for the pseudo-element if we were to use one */
+    position: relative; 
     /* Animate from a strong color to a subtle permanent background */
     animation: highlight-to-permanent 2.5s ease-out forwards;
 }

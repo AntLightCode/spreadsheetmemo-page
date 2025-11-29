@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.library-category, .library-folder').forEach(container => {
             const visibleFiles = container.querySelectorAll('.library-file:not([style*="display: none"])');
             
-            // We only want to check files directly inside the current container, not nested ones.
+            // Check files directly inside the current container, not nested ones.
             const directVisibleFiles = Array.from(visibleFiles).filter(file => file.closest('.library-category, .library-folder') === container);
 
             if (directVisibleFiles.length > 0) {
@@ -166,7 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Use the 'load' event to ensure all content is loaded and browser has finished its initial scroll jump.
 // This is more reliable for overriding the default anchor link behavior.
 window.addEventListener('load', () => {
-    // Disable the browser's automatic scroll restoration to ensure our script has full control.
+    // Disable the browser's automatic scroll restoration immediately.
+    // This prevents the browser from jumping to an anchor before the script can handle it.
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
@@ -180,7 +181,10 @@ window.addEventListener('load', () => {
         const elementId = hash.substring(1);
         const targetElement = document.getElementById(elementId);
 
-        if (targetElement) {
+        if (!targetElement) return;
+
+        // Perform JS magic only for links to files (.csv)
+        if (elementId.endsWith('.csv')) {
             // Open all parent <details> elements to make the item visible
             let parent = targetElement.parentElement;
             while (parent) {
@@ -190,9 +194,12 @@ window.addEventListener('load', () => {
                 parent = parent.parentElement;
             }
 
-            // Scroll to the element and highlight it
+            // Scroll to the element with a smooth animation and highlight it
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
             targetElement.classList.add('highlight');
+        } else {
+            // For other hashes (like categories), perform a standard instant scroll.
+            targetElement.scrollIntoView({ behavior: 'auto', block: 'start' });
         }
     };
 
