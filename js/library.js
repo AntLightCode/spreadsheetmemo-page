@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             navigator.clipboard.writeText(importUrl).then(() => {
                 // Show toast notification
+                toast.textContent = 'Direct import link copied to clipboard.';
                 toast.classList.add('show');
                 setTimeout(() => {
                     toast.classList.remove('show');
@@ -147,11 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Copy share link to clipboard
     copyShareLinkBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(shareLinkInput.value).then(() => {
-            toast.textContent = 'Share link copied!';
+            toast.textContent = 'Share link copied to clipboard.'; // Set specific text for this action
             toast.classList.add('show');
             setTimeout(() => {
                 toast.classList.remove('show');
-                toast.textContent = 'Link copied to clipboard!'; // Reset text
             }, 2000);
         }).catch(err => console.error('Failed to copy share link: ', err));
     });
