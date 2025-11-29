@@ -109,14 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const fileId = fileElement.id;
         const fileName = fileElement.querySelector('.file-name h3').textContent;
         const shareUrl = `https://spreadsheetmemo.com/library.html#${fileId}`;
-        const shareText = `Check out this flashcard set: ${fileName}`;
+        const shareText = `Check out this SpreadsheetMemo flashcard set: ${fileName}`;
 
         modalTitle.textContent = `Share "${fileName}"`;
         shareLinkInput.value = shareUrl;
 
         socialLinks.facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
         socialLinks.x.href = `https://x.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
-        socialLinks.linkedin.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareText)}`;
+        socialLinks.linkedin.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(fileName)}&summary=${encodeURIComponent(shareText)}`;
         socialLinks.reddit.href = `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(fileName)}`;
 
         modalBackdrop.classList.add('show');
