@@ -41,12 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return langFromUrl;
         }
 
-        // Get language from browser settings
-        const browserLang = navigator.language.split('-')[0];
-        if (supportedLangs.includes(browserLang)) {
-            return browserLang;
-        }
-
         return defaultLang;
     };
 

@@ -159,10 +159,13 @@ footer {
 
 /* Shared Responsive Styles */
 @media (max-width: 768px) {
-    header .header-content {
-        flex-direction: column;
+    .header-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     nav {
+        order: 3; /* Move nav to the next line */
+        width: 100%; /* Make nav take full width */
         margin-top: 1rem;
         text-align: center;
     }
@@ -178,7 +181,7 @@ footer {
         display: none;
     }
     .language-switcher {
-        margin-left: 1rem;
+        margin-left: 0;
         padding: 2px 4px;
     }
     .container {
