@@ -133,6 +133,29 @@ footer {
     text-align: center;
 }
 
+/* Language Switcher */
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+.language-switcher i {
+    margin-right: 8px;
+    color: white;
+}
+.language-switcher select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.language-switcher select:focus { outline: none; }
+.language-switcher option { color: #333; background: white; }
+
 
 /* Shared Responsive Styles */
 @media (max-width: 768px) {
@@ -153,6 +176,10 @@ footer {
     }
     .hide-on-mobile {
         display: none;
+    }
+    .language-switcher {
+        margin-left: 1rem;
+        padding: 2px 4px;
     }
     .container {
         padding: 2rem 0.8rem;
