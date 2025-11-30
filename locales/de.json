@@ -1,7 +1,7 @@
 {
     "navHowItWorks": "Wie es funktioniert",
-    "navBrowseThe": "Bibliothek ",
-    "navLibrary": "durchsuchen",
+    "navBrowseThe": " ",
+    "navLibrary": "Bibliothek",
     "navPrivacy": "Datenschutz",
     "navPolicy": "",
     "heroTitle": "Meistere alles mit SpreadsheetMemo",
@@ -40,8 +40,8 @@
     "privacyDesc": "Ihre Privatsphäre hat oberste Priorität. SpreadsheetMemo sammelt keine persönlichen Informationen, und alle Ihre Daten bleiben in Ihrem Google Drive.",
     "privacyBtn": "Lesen Sie die Datenschutzrichtlinie",
     "footerStartLearning": "Lernen beginnen",
-    "footerBrowseThe": "Bibliothek ",
-    "footerLibrary": "durchsuchen",
+    "footerBrowseThe": " ",
+    "footerLibrary": "Bibliothek",
     "footerPrivacyPolicy": "Datenschutzrichtlinie",
     "footerCredit": "Mit ❤️ als Leidenschaftsprojekt erstellt"
 }
