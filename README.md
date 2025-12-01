@@ -30,7 +30,7 @@ Use it for your studies, as a preparation tool, to check your knowledge before a
 - 🔒 **Secure & Private** - Your documents belong only to you
 - 🆓 **Completely Free** - No ads, no hidden costs
 
-## 📚 Community Library
+## 📚 Open Flashcard Library
 
 Looking for ready-to-use learning materials? Check out the **SpreadsheetMemo Library**!
 
@@ -40,7 +40,7 @@ The library contains free, public learning documents covering various subjects -
 
 ### Contribute to the Library
 
-The library is community-driven and would love to see your contributions! Whether you have new learning materials, improvements to existing documents, or bug fixes - all contributions help learners around the world.
+The library is open to everyone and would love to see your contributions! Whether you have new learning materials, improvements to existing documents, or bug fixes - all contributions help learners around the world.
 
 📂 **Library Repository**: [github.com/AntLightCode/spreadsheetmemo-library](https://github.com/AntLightCode/spreadsheetmemo-library)
 
@@ -73,7 +73,7 @@ SpreadsheetMemo respects your privacy:
 
 ## 📄 License
 
-SpreadsheetMemo is free to use. The community library is open for everyone.
+SpreadsheetMemo is free to use. The flashcard library is open for everyone.
 
 ---
 
