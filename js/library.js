@@ -106,14 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
         reddit: document.getElementById('share-reddit'),
     };
 
-    const openModal = (fileElement) => {
-        const fileId = fileElement.id;
-        const fileName = fileElement.querySelector('.file-name h3').textContent;
-        const shareUrl = `https://spreadsheetmemo.com/library.html#${fileId}`;
-        const shareText = `Check out this SpreadsheetMemo flashcard set: ${fileName}`;
+    const openModal = (element) => {
+        const elementId = element.id;
+        let name, shareUrl, shareText;
+
+        if (element.classList.contains('library-file')) {
+            name = element.querySelector('.file-name h3').textContent;
+            shareText = `Check out this SpreadsheetMemo flashcard set: ${name}`;
+        } else { // It's a category or folder (<details>)
+            name = element.querySelector('summary span').textContent;
+            const type = element.classList.contains('library-category') ? 'category' : 'folder';
+            shareText = `Check out this flashcard ${type} in the SpreadsheetMemo library: ${name}`;
+        }
+
+        shareUrl = `https://spreadsheetmemo.com/library.html#${elementId}`;
 
         // Update modal content
-        modalTitle.textContent = `Share "${fileName}"`;
+        modalTitle.textContent = `Share "${name}"`;
         shareLinkInput.value = shareUrl;
 
         // Facebook - only supports URL (fetches metadata from Open Graph tags)
@@ -126,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         socialLinks.linkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
         
         // Reddit - include more info in the title 
-        const redditTitle = `${fileName} - SpreadsheetMemo Flashcard Set`;
+        const redditTitle = `${name} - SpreadsheetMemo Flashcard Set`;
         socialLinks.reddit.href = `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(redditTitle)}`;
         modalBackdrop.classList.add('show');
     };
@@ -138,9 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach click handlers to all share buttons
     document.querySelectorAll('.share-btn').forEach(button => {
         button.addEventListener('click', (e) => {
-            const fileElement = e.target.closest('.library-file');
-            if (fileElement) {
-                openModal(fileElement);
+            e.stopPropagation(); // Prevent the <details> from toggling
+            e.preventDefault(); // Prevent any default summary action
+
+            // Find the closest shareable element (file, folder, or category)
+            const shareableElement = e.target.closest('.library-file, .library-folder, .library-category');
+            
+            if (shareableElement) {
+                openModal(shareableElement);
             }
         });
     });
