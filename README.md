@@ -26,7 +26,8 @@ Use it for your studies, as a preparation tool, to check your knowledge before a
 - 📱 **Mobile-Friendly** - Use on any device, anywhere
 - ⚡ **Fast & Responsive** - Clean interface with no unnecessary page loads
 - 📂 **Multiple Documents** - Organize your content with documents, sheets, and Named Ranges
-- 🎨 **Rich Content Support** - Add links, images, Wiki Markup, and mathematical equations (TeX/AsciiMath)
+- 🎨 **Rich Content Support** - Add links, images, Wiki Markup, Youtube videos and mathematical equations (TeX/AsciiMath)
+- 📥 **Easy Data Import** - Quickly import data from CSV files (from your computer or a URL). Create new documents or add data to existing ones.
 - 🔒 **Secure & Private** - Your documents belong only to you
 - 🆓 **Completely Free** - No ads, no hidden costs
 
