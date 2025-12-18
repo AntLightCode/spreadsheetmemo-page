@@ -39,8 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
         clearButton.style.display = query ? 'block' : 'none';
 
         allFiles.forEach(fileElement => {
-            const fileName = fileElement.querySelector('.file-name h3').textContent.toLowerCase();
-            const isVisible = fileName.includes(query);
+            // Get text from file name (h3)
+            const fileName = fileElement.querySelector('.file-name h3').textContent;
+            // Get text from all tags
+            const tags = Array.from(fileElement.querySelectorAll('.file-tag')).map(tag => tag.textContent).join(' ');
+            // Combine them for a full search
+            const searchableText = `${fileName} ${tags}`.toLowerCase();
+
+            const isVisible = searchableText.includes(query);
             if (isVisible) resultsFound++;
             fileElement.style.display = isVisible ? '' : 'none';
         });
@@ -85,6 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.value = '';
         handleSearch();
         searchInput.focus();
+    });
+
+    // Add click event listener to all tags
+    document.querySelectorAll('.file-tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+            const tagText = tag.textContent;
+            searchInput.value = tagText;
+            handleSearch();
+
+            // Scroll to the search box with a top offset for "breathing room".
+            const searchBox = document.querySelector('.library-search-box');
+            const elementPosition = searchBox.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - 32; // 32px (2rem) offset
+          
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        });
     });
 });
 
