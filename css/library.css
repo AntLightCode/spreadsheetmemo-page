@@ -455,7 +455,7 @@ a.import-button:hover {
     }
     .file-actions {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: flex-end;
         padding: 0 0.75rem; /* Add padding to inner elements instead */
     }
     .library-category-content {
