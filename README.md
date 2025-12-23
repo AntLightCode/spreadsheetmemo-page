@@ -59,6 +59,7 @@ The library is open to everyone and would love to see your contributions! Whethe
 - 📚 **Library**: [spreadsheetmemo.com/library.html](https://spreadsheetmemo.com/library.html)
 - 📂 **Library Repository**: [github.com/AntLightCode/spreadsheetmemo-library](https://github.com/AntLightCode/spreadsheetmemo-library)
 - 💬 **Discord**: [discord.gg/mGEM2e8KWN](https://discord.gg/mGEM2e8KWN) - Join the community, ask questions, and share experiences
+- 👽 **Reddit**: [reddit.com/r/SpreadsheetMemo](https://reddit.com/r/SpreadsheetMemo)
 - 🐦 **X (Twitter)**: [x.com/SpreadsheetMemo](https://x.com/SpreadsheetMemo) - Short news, tips, and updates
 - 📘 **Facebook**: [facebook.com/SpreadsheetMemo](https://facebook.com/SpreadsheetMemo) - News, tips, and update notifications
 - 📧 **Email**: AntLightCode@gmail.com
