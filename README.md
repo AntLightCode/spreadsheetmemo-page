@@ -23,12 +23,13 @@ Use it for your studies, as a preparation tool, to check your knowledge before a
 ## ✨ Key Features
 
 - ☁️ **Google Sheets Integration** - Store data with all Google Drive benefits (sharing, editing, printing)
+- 🎨 **Rich Content Support** - Add links, images, Wiki Markup, Youtube videos and mathematical equations (TeX/AsciiMath)
+- 🧮 **Google Sheets Formulas** - Harness the full power of Google Sheets formulas to create dynamic flashcards. Generate random numbers for math problems, concatenate text, or build complex questions on the fly
+- 🔊 **Text-to-Speech** - Listen to your flashcards in 30+ languages using flexible markers for entire cells or specific text fragments
+- 📂 **Multiple Documents** - Organize your content with documents, sheets, and Named Ranges
+- 📥 **Easy Data Import** - Quickly import data from CSV files (from your computer or a URL), creating new documents or adding data to existing ones
 - 📱 **Mobile-Friendly** - Use on any device, anywhere
 - ⚡ **Fast & Responsive** - Clean interface with no unnecessary page loads
-- 📂 **Multiple Documents** - Organize your content with documents, sheets, and Named Ranges
-- 🎨 **Rich Content Support** - Add links, images, Wiki Markup, Youtube videos and mathematical equations (TeX/AsciiMath)
-- 🔊 **Text-to-Speech** - Listen to your flashcards in 30+ languages using flexible markers for entire cells or specific text fragments
-- 📥 **Easy Data Import** - Quickly import data from CSV files (from your computer or a URL), creating new documents or adding data to existing ones
 - 🔒 **Secure & Private** - Your documents belong only to you
 - 🆓 **Completely Free** - No ads, no hidden costs
 
