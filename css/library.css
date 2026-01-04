@@ -469,6 +469,9 @@ a.import-button:hover {
     .library-category-content {
         padding: 0 0 0.75rem; /* Remove horizontal padding */
     }
+    .category-description {
+        padding: 0 0.5rem;
+    }
     .import-button {
         flex-grow: 0;
         width: auto;
