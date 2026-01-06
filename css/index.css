@@ -101,6 +101,9 @@
     .hero {
         padding: 3rem 1rem;
     }
+    .hero .cta-button:hover {
+        transform: none;
+    }
 }
 
 /* Modal Styles */
