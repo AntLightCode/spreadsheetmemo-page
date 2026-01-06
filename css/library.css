@@ -326,6 +326,7 @@ a.import-button {
 a.import-button:hover {
     background: #218838; /* Darker green on hover */
     color: white !important;
+    transform: none;
 }
 
 /* Toast Notification */

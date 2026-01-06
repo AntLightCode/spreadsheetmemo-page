@@ -241,3 +241,36 @@ window.addEventListener('load', () => {
 
     highlightElementFromHash();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle "Import this set" and "Start Learning" buttons loading state
+    const actionLinks = document.querySelectorAll('a[href*="script.google.com"]');
+
+    actionLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Ignore if opening in a new tab (Ctrl/Cmd/Shift/Middle click)
+            if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+
+            const btn = e.currentTarget;
+            const icon = btn.querySelector('i');
+
+            btn.classList.add('btn-loading');
+
+            if (icon) {
+                btn.dataset.originalIcon = icon.className;
+                icon.className = 'fa-solid fa-circle-notch fa-spin';
+            }
+        });
+    });
+
+    // Reset buttons when navigating back (e.g. via browser Back button)
+    window.addEventListener('pageshow', () => {
+        document.querySelectorAll('.btn-loading').forEach(btn => {
+            btn.classList.remove('btn-loading');
+            const icon = btn.querySelector('i');
+            if (icon && btn.dataset.originalIcon) {
+                icon.className = btn.dataset.originalIcon;
+            }
+        });
+    });
+});
