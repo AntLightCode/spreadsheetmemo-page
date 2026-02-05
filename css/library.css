@@ -248,6 +248,15 @@
     margin: 0; /* Reset default margin from h3 */
 }
 
+.file-name h3 a {
+    color: inherit; /* Inherit color from parent (.file-name -> h3) */
+    text-decoration: none;
+}
+
+.file-name h3 a:hover {
+    text-decoration: underline;
+}
+
 .file-tags {
     margin-top: 0.5rem;
     display: flex;
@@ -461,6 +470,10 @@ a.import-button:hover {
         margin-bottom: 0.25rem;
         padding: 0 0.75rem; /* Add padding to inner elements instead */
         width: 100%;
+    }
+    .file-name h3 a {
+        color: #1565c0;
+        text-decoration: underline;
     }
     .file-actions {
         width: 100%;
