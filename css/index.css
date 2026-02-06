@@ -52,7 +52,15 @@
     padding-top: 1.5rem;
     flex-grow: 1;
 }
-.feature-card h3 { color: #1565c0; margin-bottom: 1rem; }
+.feature-card h3 {
+    color: #1565c0;
+    margin-bottom: 1rem;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 2rem;
+}
 
 .feature-screenshot {
     position: relative;
@@ -70,6 +78,23 @@
 .feature-card:hover .feature-screenshot img {
     transform: scale(1.05);
     filter: none; /* Remove filter on hover to reveal full color */
+}
+
+.video-link-icon {
+    font-size: 1.4rem;
+    color: #c4302b; /* A slightly less intense YouTube red */
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.75;
+    position: absolute;
+    right: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.video-link-icon:hover {
+    transform: translateY(-50%) scale(1.15);
+    opacity: 1;
 }
 
 .privacy-link-content {
